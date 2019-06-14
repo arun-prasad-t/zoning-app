@@ -8,14 +8,12 @@ import { AgentDetailsComponent } from './agent-details/agent-details.component';
 import { MatInputModule, MatButtonModule, MatSelectModule, MatRadioModule, MatCardModule, MatCheckboxModule, MatDatepickerModule, MatNativeDateModule, MatFormFieldModule } from '@angular/material';
 import { ReactiveFormsModule, FormsModule, FormBuilder } from '@angular/forms';
 import { PersonalDetailsComponent } from './personal-details/personal-details.component';
-import { SampleComponent } from './sample/sample.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AgentDetailsComponent,
-    PersonalDetailsComponent,
-    SampleComponent
+    PersonalDetailsComponent
   ],
   imports: [
     BrowserModule,
