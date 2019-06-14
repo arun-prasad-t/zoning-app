@@ -1,67 +1,86 @@
-<form>
+<form [formGroup]="personalDetails" novalidate>
   <mat-card class="shipping-card">
     <mat-card-header>
       <mat-card-title>Personal Details</mat-card-title>
     </mat-card-header>
+    <mat-card-title>Proposed Insured</mat-card-title>
     <mat-card-content>
       <div class="row">
         <div class="col">
           <mat-form-field class="full-width">
-            <input matInput placeholder="ProposalNo" formControlName="ProposalNo">
+            <input matInput placeholder="Purpose Of Insurance" formControlName="purposeOfInsurance">
           </mat-form-field>
         </div>
       </div>
       <div class="row">
         <div class="col">
           <mat-form-field class="full-width">
-            <input matInput placeholder="Bank Ref. Code" formControlName="BankRefCode">            
+            <input matInput placeholder="First Name:" formControlName="FirstName">
           </mat-form-field>
         </div>
         <div class="col">
           <mat-form-field class="full-width">
-            <input matInput placeholder="Fsc Name/IC Name" formControlName="FSCName">            
+            <input matInput placeholder="Middle Name" formControlName="MiddleName">
           </mat-form-field>
         </div>
         <div class="col">
           <mat-form-field class="full-width">
-            <input matInput placeholder="Fsc Branch" formControlName="FSCBranch">            
-          </mat-form-field>
-        </div>
-        <div class="col">
-          <mat-form-field class="full-width">
-            <input matInput placeholder="STM Name" formControlName="STMName">            
+            <input matInput placeholder="Last Name" formControlName="LastName">
           </mat-form-field>
         </div>
       </div>
       <div class="row">
         <div class="col">
           <mat-form-field class="full-width">
-            <input matInput placeholder="STM Code" formControlName="STMCode">        
-          </mat-form-field>
-        </div>
-        <div class="col">
-          <mat-form-field class="full-width">
-            <input matInput placeholder="FSC Code/IC Code" formControlName="FSCCode">        
-          </mat-form-field>
-        </div>
-        <div class="col">
-          <mat-form-field class="full-width">
-            <input matInput placeholder="Pan Number" formControlName="PanNo">        
-          </mat-form-field>
-        </div>
-      </div>      
-      <div class="row">
-        <div class="col">
-          <mat-form-field class="full-width">
-            <input matInput placeholder="STM Branch" formControlName="STMBranch">
-          </mat-form-field>
-        </div>
-        <div class="col">
-          <mat-form-field class="full-width">
-            <input matInput placeholder="Receipt No." formControlName="ReceiptNo">
+            <input matInput [matDatepicker]="picker" placeholder="Date of Birth" formControlName="DateOfBirth" disabled>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker disabled="false"></mat-datepicker>
           </mat-form-field>
         </div>
       </div>
-    </mat-card-content>    
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Nationality" formControlName="Nationality">
+          </mat-form-field>
+        </div>
+      </div>
+      <br />
+      <mat-card-title>Proposer</mat-card-title><br />
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="First Name:" formControlName="FirstName2">
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Middle Name" formControlName="MiddleName2">
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Last Name" formControlName="LastName2">
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput [matDatepicker]="picker1" placeholder="Date of Birth" formControlName="DateOfBirth2"
+              disabled>
+            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+            <mat-datepicker #picker1 disabled="false"></mat-datepicker>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Nationality" formCOntrolName="Nationality2">
+          </mat-form-field>
+        </div>
+      </div>
+    </mat-card-content>
   </mat-card>
 </form>

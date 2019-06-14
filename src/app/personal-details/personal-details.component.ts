@@ -8,6 +8,19 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class PersonalDetailsComponent implements OnInit {
 
+  personalDetails = this.formBuilder.group({
+    purposeOfInsurance : null,
+    FirstName: null,
+    MiddleName:null,
+    LastName:null,
+    DateOfBirth: null,  
+    FirstName2: null,
+    MiddleName2:null,
+    LastName2:null,
+    DateOfBirth2: null,
+    Nationality:null,
+    Nationality2:null
+  });
   constructor(private formBuilder:FormBuilder) { }
 
   ngOnInit() {
