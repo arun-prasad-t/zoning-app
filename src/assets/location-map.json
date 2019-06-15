@@ -1,0 +1,63 @@
+{
+
+    "NonMedical":{
+    
+        "AgentDetails" :{
+    
+            "ProposalNo": [82,94,220,25],
+    
+            "Employee" : [301,96,298,23],
+    
+            "Sector": [596,102,103,21],
+    
+            "BankRefCode" : [65,760,210,753],
+    
+            "FSCName" : [305,115,221,18],
+    
+            "FSCBranch" : [525,116,164,20],
+    
+            "STMCode" : [85,128,220,18],
+    
+            "FSCCode" : [301,127,228,23],
+    
+            "STMName" : [524,129,161,20],
+    
+            "STMBranch" : [90,144,214,18],
+    
+            "ReceiptNo" : [300,145,232,19],
+    
+            "PANNo" : [525,144,180,21],
+    
+            "IndividualRI" : [384,736,483,731],
+    
+            "EIA" : [66,726,102,723],
+    
+            "EIADetails" : [111,727,126,722],
+    
+            "AdhaarNo" : [203,725,340,722],
+    
+            "firstLifeInsured" : [],
+    
+            "secondLifeInsured" : []
+    
+            },
+    
+        "proposedInsured":{
+    
+            "PurposeofInsurance": [88,208,309,22],
+    
+            "FirstName": [72,228,333,22],
+    
+            "MiddleName":[92,247,304,19],
+    
+            "LastName":[99,265,298,21],
+    
+            "DateOfBirth":[81,277,200,29],
+    
+            "Nationality":[82,294,305,21]
+    
+        }
+    
+    }    
+    
+    }
