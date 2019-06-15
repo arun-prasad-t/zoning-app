@@ -349,15 +349,15 @@ export class ImageCropperComponent implements OnChanges {
         //301,127,228,23
         //console.log(this.maxSize.height + '' + this.maxSize.width)
         console.log("here "+this.mapCordService.x1+" "+this.mapCordService.y1);
-        this.cropper.x1 = this.mapCordService.x1 * scale_x;
-        this.cropper.y1 = this.mapCordService.y1 * scale_y;
-        this.cropper.x2 = this.mapCordService.x2 * scale_x;
-        this.cropper.y2 = this.mapCordService.y2 * scale_y;
- 
         // this.cropper.x1 = this.mapCordService.x1 * scale_x;
         // this.cropper.y1 = this.mapCordService.y1 * scale_y;
-        // this.cropper.x2 = (this.cropper.x1  +  this.mapCordService.x2) * scale_x;
-        // this.cropper.y2 = (this.cropper.y1 + this.mapCordService.y2) * scale_y;
+        // this.cropper.x2 = this.mapCordService.x2 * scale_x;
+        // this.cropper.y2 = this.mapCordService.y2 * scale_y;
+ 
+        this.cropper.x1 = this.mapCordService.x1 * scale_x;
+        this.cropper.y1 = this.mapCordService.y1 * scale_y;
+        this.cropper.x2 = (this.cropper.x1  +  this.mapCordService.x2) * scale_x;
+        this.cropper.y2 = (this.cropper.y1 + this.mapCordService.y2) * scale_y;
 
     }
 
@@ -494,8 +494,8 @@ export class ImageCropperComponent implements OnChanges {
             this.startCropImage.emit();
             const imagePosition = this.getImagePosition();
             console.log(imagePosition.x2 + " " +imagePosition.x1);
-            const width = imagePosition.x2 - imagePosition.x1;
-            const height = imagePosition.y2 - imagePosition.y1;
+            const width = Math.abs(imagePosition.x2 - imagePosition.x1);
+            const height = Math.abs(imagePosition.y2 - imagePosition.y1);
 
             const cropCanvas = document.createElement('canvas') as HTMLCanvasElement;
             var h = 1123;
