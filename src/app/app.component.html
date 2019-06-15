@@ -1,4 +1,21 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <router-outlet></router-outlet>
-<app-agent-details> </app-agent-details>
-<app-personal-details></app-personal-details>
+<div class="row">
+    <div class="column">
+        <app-agent-details> </app-agent-details>
+        <app-personal-details></app-personal-details>
+    </div>
+    <div class="column">
+        <input type="file" (change)="fileChangeEvent($event)" />
+        <!-- <button (click)="rotateLeft()">Rotate left</button>
+        <button (click)="rotateRight()">Rotate right</button>
+        <button (click)="flipHorizontal()">Flip horizontal</button>
+        <button (click)="flipVertical()">Flip vertical</button> -->
+        <app-image-cropper [imageChangedEvent]="imageChangedEvent" [maintainAspectRatio]="true" [aspectRatio]="4 / 3"
+            [resizeToWidth]="128" [cropperMinWidth]="128" [onlyScaleDown]="true" [roundCropper]="false" format="png"
+            outputType="base64" (imageCropped)="imageCropped($event)" (imageLoaded)="imageLoaded()"
+            (cropperReady)="cropperReady()" (loadImageFailed)="loadImageFailed()"
+            [style.display]="showCropper ? null : 'none'"></app-image-cropper>
+        <img [src]="croppedImage" width="500px" />
+    </div>
+</div>
